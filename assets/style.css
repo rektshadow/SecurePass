@@ -1,0 +1,139 @@
+/* Global Styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(images/Background.jpg);
+  background-color: #17a2b8; 
+}
+
+
+#header{
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: -1px 0 #17a2b8, 0 1px #17a2b8, 1px 0 #17a2b8, 0 -1px #17a2b8;
+}
+
+/* Password Input Start */
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* Slider Start */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 15px; /* Making it round */
+  border-radius: 5px; /* Making it round */
+  height: 25px; /* Specified height */
+  background: #007bff; /* Slider background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%; /* Making it round */
+  background:#ffc107; /* Slider Color*/
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%; /* Making it round */
+  background: #ffc107; /* Slider Color */
+  cursor: pointer; /* Cursor on hover */
+}
+
+
+/* Password Display Field Start */
+#password {
+  width: 100%;
+  text-align: center;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: break-word;
+}
+
+.form-control-lg {
+  height: 5rem;
+}
+
+/* SnackBar for Copy Success Message Start*/
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+/* Octocat in the Right Corner Start*/
+
+.github-corner svg{
+  position:absolute;
+  right: 0;
+	top:0;
+	color:#eeeeee;
+	fill:#353535;
+}
+.github-corner:hover .octo-arm{
+	animation:octocat-wave .56s;
+}
+@keyframes octocat-wave{
+	0%, 100%{
+		transform:rotate(0);
+	}
+	20%, 60%{
+		transform:rotate(-20deg);
+	}
+	40%, 80%{
+		transform:rotate(10deg);
+	}
+}
